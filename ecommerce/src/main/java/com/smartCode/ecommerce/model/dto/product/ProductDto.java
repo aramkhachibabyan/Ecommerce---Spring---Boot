@@ -27,7 +27,6 @@ public class ProductDto {
     @NotBlank
     private String description;
 
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)
+    @NotBlank
     private LocalDate productionDate;
 }

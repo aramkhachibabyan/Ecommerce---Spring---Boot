@@ -14,7 +14,7 @@ public interface UserService {
 
     ResponseUserDto getById(Integer id);
 
-    ResponseUserDto verify(String email, String code);
+    ResponseUserDto verify(Integer id, String code);
 
     ResponseUserDto updatePartially(Integer id, PartialUpdateUserDto updatedUser);
 
@@ -23,5 +23,5 @@ public interface UserService {
     ResponseUserDto delete(Integer id,String password);
 
     ResponseUserDto updateUser(Integer id,UpdateUserDto updatedUser);
-    ResponseUserDto changePassword(String email, String newPassword, String repeatPassword);
+    ResponseUserDto changePassword(Integer id,String oldPassword, String newPassword, String repeatPassword);
 }

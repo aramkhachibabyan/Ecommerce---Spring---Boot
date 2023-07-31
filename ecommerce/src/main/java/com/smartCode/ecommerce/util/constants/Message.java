@@ -1,24 +1,24 @@
 package com.smartCode.ecommerce.util.constants;
 
+import org.aspectj.util.IStructureModel;
+
 public interface Message {
-    String AUTHENTICATION_SUCCESS = "AUTHENTICATION SUCCESS";
-    String INVALID_EMAIL = "INVALID EMAIL";
-    String BLANK_EMAIL = "EMAIL MUST NOT BE BLANK";
-    String BLANK_PASSWORD = "PASSWORD MUST NOT BE BLANK";
-    String INVALID_PASSWORD = "INVALID PASSWORD";
-    String USER_NOT_FOUND = "USER NOT FOUND";
-    String PRODUCT_NOT_FOUND = "PRODUCT NOT FOUND";
-    String INVALID_LENGTH_OF_PASSWORD = "PASSWORD CAN'T BE LESS THAN 8 SYMBOLS";
-    String REGISTRATION_FAILED = "REGISTRATION FAILED";
-    String INVALID_AGE = "AGE MUST BE MORE THAN 0";
-    String INVALID_BALANCE = "BALANCE CAN'T BE NEGATIVE";
-    String EMAIL_IS_NOT_AVAILABLE = "This username isn't available. Please try another.";
-    String BLANK_PRODUCT_CATEGORY = "CATEGORY MUST NOT BE BLANK";
-    String BLANK_PRODUCT_NAME = "NAME MUST NOT BE BLANK";
-    String INVALID_DATE_FORMAT = "INVALID DATE FORMAT (DD/MM/YYYY)";
-    String INVALID_PRICE = "PRICE MUST BE MORE THAN 0" ;
-    String INVALID_ID = "ID MUST BE MORE THAN 0";
-    String INVALID_CODE = "CODE IS INCORRECT";
-    String VERIFY_FIRST = "VERIFY YOUR ACCOUNT";
-    String PASSWORD_MATCHING = "PASSWORDS DOES NOT MATCH";
+    String USERNAME_IS_NOT_AVAILABLE = "This username isn't available. Please try another";
+    String PASSWORD_MATCHING = "Password does not match";
+    String EMAIL_IS_NOT_AVAILABLE = "This email isn't available. Please try another";
+    String PHONE_NUMBER_IS_NOT_AVAILABLE = "This phone number isn't available. Please try another";
+    String INVALID_OLD_PASSWORD = "Invalid old password";
+    String INVALID_CODE = "Invalid code";
+    String INVALID_PASSWORD = "Invalid password";
+    String USER_IS_NOT_VERIFIED = "Please verify first";
+
+    static String userNotFound(Integer id){
+        return String.format("User with id: %d not found",id);
+    }
+    static String userNotFound(String email){
+        return String.format("User with email: %s not found",email);
+    }
+    static String productNotFound(Integer id){
+        return String.format("Product with id: %d not found",id);
+    }
 }

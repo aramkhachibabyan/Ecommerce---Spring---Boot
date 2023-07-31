@@ -1,15 +1,12 @@
 package com.smartCode.ecommerce.model.dto.user;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.smartCode.ecommerce.util.constants.Gender;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 @Getter
@@ -32,12 +29,11 @@ public class UserDto {
     private String email;
 
     @NotBlank
+    @Pattern(regexp = "(([+374]{4}|[0]{1}))?([1-9]{2})(\\d{6})")
     private String phone;
 
     @NotBlank
-    private String gender;
-
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)
+    private Gender gender;
+    @NotBlank
     private LocalDate dayOfBirth;
 }

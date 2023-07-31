@@ -43,10 +43,10 @@ public class AccountController {
         return ResponseEntity.ok(userService.getById(id));
     }
 
-    @PutMapping(value = "/verify")
-    public ResponseEntity<ResponseUserDto> verify(@RequestParam @NotBlank @Email String email,
+    @PostMapping( "/{id}")
+    public ResponseEntity<ResponseUserDto> verify(@PathVariable @Positive Integer id,
                                                   @RequestParam @NotBlank @Size(min = 6, max = 6) String code) {
-        return ResponseEntity.ok(userService.verify(email, code));
+        return ResponseEntity.ok(userService.verify(id, code));
     }
 
     @DeleteMapping(path = "/{id}")
@@ -62,7 +62,7 @@ public class AccountController {
 
     @PatchMapping(path = "/{id}")
     public ResponseEntity<ResponseUserDto> updateUserPartially(@PathVariable @Positive Integer id,
-                                                               @RequestBody  PartialUpdateUserDto user) {
+                                                               @RequestBody @Valid PartialUpdateUserDto user) {
         return ResponseEntity.ok(userService.updatePartially(id, user));
     }
 
@@ -71,15 +71,16 @@ public class AccountController {
         return ResponseEntity.ok(userService.updateUser(id, user));
     }
 
-    @PutMapping(path = "/changePassword")
-    public ResponseEntity<ResponseUserDto> changePassword(@RequestParam @NotBlank @Size(min = 8) String newPassword,
+    @PutMapping(path = "/changePassword/{id}")
+    public ResponseEntity<ResponseUserDto> changePassword(@RequestParam @NotBlank @Size(min = 8) String oldPassword,
+                                                          @RequestParam @NotBlank @Size(min = 8) String newPassword,
                                                           @RequestParam @NotBlank @Size(min = 8) String repeatPassword,
-                                                          @RequestParam @NotBlank @Email String email) {
-        return ResponseEntity.ok(userService.changePassword(email, newPassword, repeatPassword));
+                                                          @PathVariable @Positive Integer id) {
+        return ResponseEntity.ok(userService.changePassword(id,oldPassword, newPassword, repeatPassword));
     }
 
     @GetMapping
-    public ResponseEntity<List<ResponseUserDto>> getAllUsers(){
+    public ResponseEntity<List<ResponseUserDto>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 

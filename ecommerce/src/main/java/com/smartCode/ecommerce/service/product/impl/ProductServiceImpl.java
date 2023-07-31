@@ -1,6 +1,5 @@
 package com.smartCode.ecommerce.service.product.impl;
 
-import com.smartCode.ecommerce.exceptions.ProductNotFoundException;
 import com.smartCode.ecommerce.mapper.ProductMapper;
 import com.smartCode.ecommerce.model.dto.product.CreateProductDto;
 import com.smartCode.ecommerce.model.dto.product.PartialUpdateProductDto;

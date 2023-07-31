@@ -1,33 +1,37 @@
 package com.smartCode.ecommerce.model.dto.user;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.smartCode.ecommerce.util.constants.Gender;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 @Getter
 @Setter
 public class PartialUpdateUserDto {
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private String name;
 
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private String lastname;
 
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private String middleName;
 
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private String username;
 
+    @Email
     private String email;
 
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private String phone;
 
-    private String gender;
+    //    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
+    private Gender gender;
 
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)
+    @Pattern(regexp = "^(?!\\s*$).+", message = "must not be blank")
     private LocalDate dayOfBirth;
 }

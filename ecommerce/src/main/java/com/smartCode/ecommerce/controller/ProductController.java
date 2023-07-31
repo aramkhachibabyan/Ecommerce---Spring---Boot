@@ -30,7 +30,7 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping
-    public ResponseEntity<ResponseProductDto> create(@RequestBody CreateProductDto productDto){
+    public ResponseEntity<ResponseProductDto> create(@RequestBody @Valid CreateProductDto productDto){
         return ResponseEntity.ok(productService.create(productDto));
     }
 
@@ -51,7 +51,7 @@ public class ProductController {
 
     @PatchMapping(path = "/{id}")
     public ResponseEntity<ResponseProductDto> updateProductPartially(@PathVariable @Positive Integer id,
-                                                               @RequestBody PartialUpdateProductDto productDto) {
+                                                               @RequestBody @Valid PartialUpdateProductDto productDto) {
         return ResponseEntity.ok(productService.updateProductPartially(id, productDto));
     }
 
