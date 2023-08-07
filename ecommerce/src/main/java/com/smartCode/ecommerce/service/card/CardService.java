@@ -10,9 +10,10 @@ public interface CardService {
 
     ResponseCardDto createCard(CreateCardDto createCardDto);
 
-    List<ResponseCardDto> getCardByUserId(Integer userId);
+    List<ResponseCardDto> getCardsByUserId(Integer userId);
 
     void deleteCardsByUserId(Integer userId);
     ResponseCardDto deleteCardById(Integer id);
 
+    ResponseCardDto getCardById(Integer id);
 }

@@ -27,17 +27,12 @@ public class CardServiceImpl implements CardService {
                 "http://localhost:8081/cards", createCardDto, ResponseCardDto.class).getBody();
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public List<ResponseCardDto> getCardByUserId(Integer userId) {
-        return Arrays.asList(new RestTemplate().getForEntity(
-                String.format("http://localhost:8081/cards/%d", userId), ResponseCardDto[].class).getBody());
-    }
+
 
     @Override
     @Transactional
     public void deleteCardsByUserId(Integer userId) {
-        new RestTemplate().delete(String.format("http://localhost:8081/cards/%d", userId));
+        new RestTemplate().delete(String.format("http://localhost:8081/cards/users/%d", userId));
     }
 
     @Override
@@ -48,5 +43,16 @@ public class CardServiceImpl implements CardService {
         return new RestTemplate().exchange(
                 "http://localhost:8081/cards", HttpMethod.DELETE, new HttpEntity<>(new HttpHeaders()),
                 ResponseCardDto.class, params).getBody();
+    }
+    @Override
+    @Transactional(readOnly = true)
+    public List<ResponseCardDto> getCardsByUserId(Integer userId) {
+        return Arrays.asList(new RestTemplate().getForEntity(
+                String.format("http://localhost:8081/cards/users/%d", userId), ResponseCardDto[].class).getBody());
+    }
+    @Override
+    @Transactional()
+    public ResponseCardDto getCardById(Integer id) {
+        return new RestTemplate().getForEntity(String.format("http://localhost:8081/cards/%d", id),ResponseCardDto.class).getBody();
     }
 }

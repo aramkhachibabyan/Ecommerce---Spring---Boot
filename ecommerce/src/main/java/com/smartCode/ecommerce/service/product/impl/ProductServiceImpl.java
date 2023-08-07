@@ -1,5 +1,6 @@
 package com.smartCode.ecommerce.service.product.impl;
 
+import com.smartCode.ecommerce.exceptions.ResourceNotFoundException;
 import com.smartCode.ecommerce.mapper.ProductMapper;
 import com.smartCode.ecommerce.model.dto.product.CreateProductDto;
 import com.smartCode.ecommerce.model.dto.product.PartialUpdateProductDto;
@@ -34,7 +35,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public ResponseProductDto updateProduct(Integer id, UpdateProductDto updateProductDto) {
-        ProductEntity productEntity = productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(Message.PRODUCT_NOT_FOUND));
+        ProductEntity productEntity = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("aaaaa"));
         ProductEntity entity = productMapper.toEntity(updateProductDto, productEntity);
         ProductEntity save = productRepository.save(entity);
         return productMapper.toDto(save);
@@ -43,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public ResponseProductDto updateProductPartially(Integer id, PartialUpdateProductDto productDto) {
-        ProductEntity product = productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(Message.PRODUCT_NOT_FOUND));
+        ProductEntity product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("aaa"));
 
         product.setName(nonNull(productDto.getName()) ? productDto.getName() : product.getName());
         product.setCategory(nonNull(productDto.getCategory()) ? productDto.getCategory() : product.getCategory());
@@ -57,7 +58,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public ResponseProductDto delete(Integer id) {
-        ProductEntity product = productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(Message.PRODUCT_NOT_FOUND));
+        ProductEntity product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("   "));
         productRepository.delete(product);
         return productMapper.toDto(product);
     }

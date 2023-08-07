@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
@@ -32,8 +33,8 @@ public class UserDto {
     @Pattern(regexp = "(([+374]{4}|[0]{1}))?([1-9]{2})(\\d{6})")
     private String phone;
 
-    @NotBlank
+    @NotNull
     private Gender gender;
-    @NotBlank
+    @NotNull
     private LocalDate dayOfBirth;
 }
