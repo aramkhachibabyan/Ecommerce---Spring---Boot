@@ -3,6 +3,7 @@ package com.smartCode.ecommerce.service.user.impl;
 import com.smartCode.ecommerce.exceptions.DuplicationException;
 import com.smartCode.ecommerce.exceptions.ResourceNotFoundException;
 import com.smartCode.ecommerce.exceptions.ValidationException;
+import com.smartCode.ecommerce.feign.NotificationFeignClient;
 import com.smartCode.ecommerce.mapper.UserMapper;
 import com.smartCode.ecommerce.model.dto.user.ChangePasswordUserDto;
 import com.smartCode.ecommerce.model.dto.user.CreateUserDto;
@@ -27,7 +28,6 @@ import com.smartCode.ecommerce.util.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,9 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 
 import static java.util.Objects.nonNull;
 
@@ -54,6 +52,7 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
     private final TokenService tokenService;
+    private final NotificationFeignClient notificationFeignClient;
 
     @Override
     @Transactional
@@ -73,8 +72,7 @@ public class UserServiceImpl implements UserService {
         entity.setCode(RandomGenerator.generateNumericString(6));
         entity.setAge(Year.now().getValue() - entity.getDayOfBirth().getYear());
         UserEntity save = userRepository.save(entity);
-        emailService.sendSimpleMessage(entity.getEmail(), "Verification",
-                "Your verification code is " + save.getCode());
+        notificationFeignClient.verify(entity.getEmail(), entity.getCode());
         return userMapper.toDto(save);
     }
 

@@ -1,6 +1,7 @@
 package com.smartCode.ecommerce.exceptions;
 
 import com.smartCode.ecommerce.util.ApiError;
+import feign.FeignException;
 import org.apache.tomcat.websocket.AuthenticationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,12 @@ public class GlobalExceptionHandler {
 //    public ResponseEntity<ApiError> handleRuntimeExceptionException(HttpServletRequest req, RuntimeException e) {
 //        return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "something went wrong", req.getRequestURI());
 //    }
+
+    @ExceptionHandler(FeignException.class)
+    @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ApiError> handleRuntimeExceptionException(HttpServletRequest req, FeignException e) {
+        return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Service is unavailable", req.getRequestURI());
+    }
 
     @ExceptionHandler(AuthenticationException.class)
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)

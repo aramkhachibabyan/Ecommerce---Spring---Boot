@@ -11,6 +11,7 @@ public interface Message {
     String INVALID_CODE = "Invalid code";
     String INVALID_PASSWORD = "Invalid password";
     String USER_IS_NOT_VERIFIED = "Please verify first";
+    String INVALID_CARD_NUMBER = "Invalid card number";
 
     static String userNotFound(Integer id){
         return String.format("User with id: %d not found",id);

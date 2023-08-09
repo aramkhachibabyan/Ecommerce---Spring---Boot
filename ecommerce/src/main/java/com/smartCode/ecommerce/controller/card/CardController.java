@@ -47,10 +47,10 @@ public class CardController {
         return ResponseEntity.ok(cardService.getCardById(id));
     }
 
-    @DeleteMapping("/users/{userId}")
+    @DeleteMapping("/users")
     @PreAuthorize("hasRole('" + Roles.ROLE_USER + "')")
-    public ResponseEntity<Void> deleteCardsByUserId(@PathVariable @Positive Integer userId){
-        cardService.deleteCardsByUserId(userId);
+    public ResponseEntity<Void> deleteCardsByUserId(){
+        cardService.deleteCardsByUserId(CurrentUser.getId());
         return ResponseEntity.ok().build();
     }
 
