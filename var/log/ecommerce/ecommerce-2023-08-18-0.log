@@ -1,0 +1,1488 @@
+2023-08-18 14:22:31.604  INFO 12176 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 12176 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 14:22:31.608  INFO 12176 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 14:22:31.706  INFO 12176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 14:22:32.527  INFO 12176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 14:22:32.585  INFO 12176 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2023-08-18 14:22:32.771  INFO 12176 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 14:22:33.461  INFO 12176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 14:22:33.468  INFO 12176 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 14:22:33.468  INFO 12176 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 14:22:33.559  INFO 12176 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 14:22:33.559  INFO 12176 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1851 ms
+2023-08-18 14:22:33.829  INFO 12176 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 14:22:33.977  INFO 12176 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 14:22:34.122  INFO 12176 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 14:22:34.295  INFO 12176 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 14:22:34.583  INFO 12176 --- [restartedMain] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2023-08-18 14:22:34.606  INFO 12176 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 14:22:34.725  INFO 12176 --- [restartedMain] liquibase.changelog                      : SQL in file classpath:/db/changelog/V1_Initialization.sql executed
+2023-08-18 14:22:34.728  INFO 12176 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::1::Aram ran successfully in 59ms
+2023-08-18 14:22:34.780  INFO 12176 --- [restartedMain] liquibase.changelog                      : Data loaded from 'classpath:/db/changelog/roles.csv' into table 'roles'
+2023-08-18 14:22:34.782  INFO 12176 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::2::Aram ran successfully in 48ms
+2023-08-18 14:22:34.816  INFO 12176 --- [restartedMain] liquibase.changelog                      : Data loaded from 'classpath:/db/changelog/admin.csv' into table 'users'
+2023-08-18 14:22:34.819  INFO 12176 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::3::Aram ran successfully in 31ms
+2023-08-18 14:22:34.831  INFO 12176 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 14:22:34.920  INFO 12176 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 14:22:34.957  INFO 12176 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 14:22:35.079  INFO 12176 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 14:22:35.161  INFO 12176 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 14:22:35.696  INFO 12176 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 14:22:35.705  INFO 12176 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:22:36.537  WARN 12176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 14:22:37.124  INFO 12176 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ebfce6c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48f034a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bec721d, org.springframework.security.web.header.HeaderWriterFilter@36b91a12, org.springframework.security.web.authentication.logout.LogoutFilter@60ef5190, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@565ea2aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b5ad1fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f5c1ee9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ced5b99, org.springframework.security.web.session.SessionManagementFilter@bd50acc, org.springframework.security.web.access.ExceptionTranslationFilter@465f2d0b, org.springframework.security.web.access.intercept.AuthorizationFilter@22de98ed]
+2023-08-18 14:22:37.999  INFO 12176 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 14:22:38.093  INFO 12176 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:22:38.093  INFO 12176 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:22:38.093  INFO 12176 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692354158092
+2023-08-18 14:22:38.668  INFO 12176 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 14:22:38.681  INFO 12176 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:22:38.681  INFO 12176 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:22:38.682  INFO 12176 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:22:38.746  INFO 12176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 14:22:38.928  INFO 12176 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 7.956 seconds (JVM running for 8.904)
+2023-08-18 14:22:59.405  INFO 12176 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 14:22:59.542  INFO 12176 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.account.AccountController.register() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto@5d9e3c73]
+2023-08-18 14:22:59.559  INFO 12176 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserServiceImpl.register() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto@5d9e3c73]
+2023-08-18 14:22:59.821  INFO 12176 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.ResponseUserDto@1119d4a6
+2023-08-18 14:22:59.833  INFO 12176 --- [task-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.verify() with argument[s] = [aramkhachibabyan9@gmail.com, 870310, 2]
+2023-08-18 14:22:59.833  INFO 12176 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.account.AccountController() with result = <200 OK OK,com.smartCode.ecommerce.model.dto.user.ResponseUserDto@1119d4a6,[]>
+2023-08-18 14:23:59.879 ERROR 12176 --- [task-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exception in com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.verify() with cause = Read timed out executing POST http://localhost:8082/notify/verify
+2023-08-18 14:23:59.894 ERROR 12176 --- [task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void com.smartCode.ecommerce.util.event.listener.VerificationEventListener.handleVerificationEvent(com.smartCode.ecommerce.util.event.VerificationEvent)
+
+feign.RetryableException: Read timed out executing POST http://localhost:8082/notify/verify
+	at feign.FeignException.errorExecuting(FeignException.java:268) ~[feign-core-11.10.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:131) ~[feign-core-11.10.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91) ~[feign-core-11.10.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100) ~[feign-core-11.10.jar:na]
+	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory$1.proceed(FeignCachingInvocationHandlerFactory.java:66) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:351) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.cloud.openfeign.FeignCachingInvocationHandlerFactory.lambda$create$1(FeignCachingInvocationHandlerFactory.java:53) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy168.verify(Unknown Source) ~[na:na]
+	at com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.verify(NotificationServiceImpl.java:47) ~[classes/:na]
+	at com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl$$FastClassBySpringCGLIB$$24597353.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-5.3.29.jar:5.3.29]
+	at com.smartCode.ecommerce.aop.LoggingAspect.logAround(LoggingAspect.java:68) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.29.jar:5.3.29]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.29.jar:5.3.29]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.29.jar:5.3.29]
+	at com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl$$EnhancerBySpringCGLIB$$b587a500.verify(<generated>) ~[classes/:na]
+	at com.smartCode.ecommerce.util.event.listener.VerificationEventListener.handleVerificationEvent(VerificationEventListener.java:19) ~[classes/:na]
+	at com.smartCode.ecommerce.util.event.listener.VerificationEventListener$$FastClassBySpringCGLIB$$e8c65b86.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.29.jar:5.3.29]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.3.29.jar:5.3.29]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:825) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:760) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1688) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:110) ~[feign-core-11.10.jar:na]
+	at feign.Client$Default.execute(Client.java:106) ~[feign-core-11.10.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:121) ~[feign-core-11.10.jar:na]
+	... 49 common frames omitted
+
+2023-08-18 14:24:31.819  INFO 12176 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.account.AccountController.verify() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.VerificationDto@3059786b]
+2023-08-18 14:24:31.824  INFO 12176 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserServiceImpl.verify() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.VerificationDto@3059786b]
+2023-08-18 14:24:31.851 ERROR 12176 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exception in com.smartCode.ecommerce.service.user.impl.UserServiceImpl.verify() with cause = Invalid code
+2023-08-18 14:24:31.856 ERROR 12176 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exception in com.smartCode.ecommerce.controller.account.AccountController.verify() with cause = Invalid code
+2023-08-18 14:24:31.857 ERROR 12176 --- [http-nio-8080-exec-2] c.s.e.exceptions.GlobalExceptionHandler  : Invalid code
+2023-08-18 14:24:31.857 ERROR 12176 --- [http-nio-8080-exec-2] c.s.e.exceptions.GlobalExceptionHandler  : RequestURI /verify
+2023-08-18 14:24:31.876  WARN 12176 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.smartCode.ecommerce.exceptions.ValidationException: Invalid code]
+2023-08-18 14:28:40.935  INFO 12176 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:28:40.938  INFO 12176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-18 14:28:40.941  INFO 12176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-18 14:28:44.840  INFO 7744 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 7744 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 14:28:44.843  INFO 7744 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 14:28:44.935  INFO 7744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 14:28:45.733  INFO 7744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 14:28:45.797  INFO 7744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2023-08-18 14:28:45.998  INFO 7744 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 14:28:46.642  INFO 7744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 14:28:46.649  INFO 7744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 14:28:46.649  INFO 7744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 14:28:46.733  INFO 7744 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 14:28:46.733  INFO 7744 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1797 ms
+2023-08-18 14:28:46.969  INFO 7744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 14:28:47.079  INFO 7744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 14:28:47.189  INFO 7744 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 14:28:47.406  INFO 7744 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 14:28:47.701  INFO 7744 --- [restartedMain] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2023-08-18 14:28:47.713  INFO 7744 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 14:28:47.806  INFO 7744 --- [restartedMain] liquibase.changelog                      : SQL in file classpath:/db/changelog/V1_Initialization.sql executed
+2023-08-18 14:28:47.808  INFO 7744 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::1::Aram ran successfully in 45ms
+2023-08-18 14:28:47.866  INFO 7744 --- [restartedMain] liquibase.changelog                      : Data loaded from 'classpath:/db/changelog/roles.csv' into table 'roles'
+2023-08-18 14:28:47.869  INFO 7744 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::2::Aram ran successfully in 48ms
+2023-08-18 14:28:47.897  INFO 7744 --- [restartedMain] liquibase.changelog                      : Data loaded from 'classpath:/db/changelog/admin.csv' into table 'users'
+2023-08-18 14:28:47.902  INFO 7744 --- [restartedMain] liquibase.changelog                      : ChangeSet classpath:/db/changelog/db.changelog-master.yaml::3::Aram ran successfully in 29ms
+2023-08-18 14:28:47.912  INFO 7744 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 14:28:48.001  INFO 7744 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 14:28:48.037  INFO 7744 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 14:28:48.152  INFO 7744 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 14:28:48.230  INFO 7744 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 14:28:48.719  INFO 7744 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 14:28:48.726  INFO 7744 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:28:49.230  WARN 7744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 14:28:49.621  INFO 7744 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b29d944, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d8d51c0, org.springframework.security.web.context.SecurityContextPersistenceFilter@76a662bf, org.springframework.security.web.header.HeaderWriterFilter@2a9c8daf, org.springframework.security.web.authentication.logout.LogoutFilter@22de98ed, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@500079ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7936e7bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@566f9b1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6824e3e5, org.springframework.security.web.session.SessionManagementFilter@7f5c1ee9, org.springframework.security.web.access.ExceptionTranslationFilter@57176967, org.springframework.security.web.access.intercept.AuthorizationFilter@345e5786]
+2023-08-18 14:28:50.195  INFO 7744 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 14:28:50.259  INFO 7744 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:28:50.259  INFO 7744 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:28:50.259  INFO 7744 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692354530258
+2023-08-18 14:28:50.537  INFO 7744 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 14:28:50.545  INFO 7744 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:28:50.545  INFO 7744 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:28:50.545  INFO 7744 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:28:50.596  INFO 7744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 14:28:50.694  INFO 7744 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 6.432 seconds (JVM running for 7.255)
+2023-08-18 14:29:44.925  INFO 7744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 14:29:45.054  INFO 7744 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.account.AccountController.register() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto@36718250]
+2023-08-18 14:29:45.071  INFO 7744 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserServiceImpl.register() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto@36718250]
+2023-08-18 14:29:45.318  INFO 7744 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.ResponseUserDto@4aeeae07
+2023-08-18 14:29:45.338  INFO 7744 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.account.AccountController() with result = <200 OK OK,com.smartCode.ecommerce.model.dto.user.ResponseUserDto@4aeeae07,[]>
+2023-08-18 14:29:45.341  INFO 7744 --- [task-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.verify() with argument[s] = [aramkhachibabyan9@gmail.com, 494863, 2]
+2023-08-18 14:29:48.310  INFO 7744 --- [task-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:30:20.635  INFO 7744 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.account.AccountController.verify() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.VerificationDto@2c685cfb]
+2023-08-18 14:30:20.638  INFO 7744 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserServiceImpl.verify() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.VerificationDto@2c685cfb]
+2023-08-18 14:30:20.655  INFO 7744 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.ResponseUserDto@3a10b8f8
+2023-08-18 14:30:20.676  INFO 7744 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.account.AccountController() with result = <200 OK OK,com.smartCode.ecommerce.model.dto.user.ResponseUserDto@3a10b8f8,[]>
+2023-08-18 14:30:38.040  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.account.AccountController.loginUser() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.UserLoginDto@f82d447]
+2023-08-18 14:30:38.043  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserServiceImpl.login() with argument[s] = [com.smartCode.ecommerce.model.dto.user.auth.UserLoginDto@f82d447]
+2023-08-18 14:30:38.123  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserDetailsServiceImpl.loadUserByUsername() with argument[s] = [aramkhachibabyan]
+2023-08-18 14:30:38.139  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserDetailsServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.UserDetailsImpl@52f28dc2
+2023-08-18 14:30:38.221  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.user.impl.UserDetailsServiceImpl.loadUserByUsername() with argument[s] = [aramkhachibabyan]
+2023-08-18 14:30:38.224  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserDetailsServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.UserDetailsImpl@20bda8e6
+2023-08-18 14:30:38.224  INFO 7744 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : generate access token
+2023-08-18 14:30:38.431  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.saveToken() with argument[s] = [com.smartCode.ecommerce.model.entity.token.TokenEntity@5bb339be]
+2023-08-18 14:30:38.439  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = null
+2023-08-18 14:30:38.439  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.user.impl.UserServiceImpl() with result = com.smartCode.ecommerce.model.dto.user.auth.UserAuthDto@e418991
+2023-08-18 14:30:38.442  INFO 7744 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.account.AccountController() with result = <200 OK OK,com.smartCode.ecommerce.model.dto.user.auth.UserAuthDto@e418991,[]>
+2023-08-18 14:31:13.296  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.findTokenEntityByToken() with argument[s] = [lv4B_7yAO3ZhGY22qE1EwUwQJ3z6Ah5W5WAe3C3WgwQzmr_Yz27pgLrW95AoeKDQyShwL2cELGR8ZClsqao44w]
+2023-08-18 14:31:13.302  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = com.smartCode.ecommerce.model.entity.token.TokenEntity@1c4ae50f
+2023-08-18 14:31:13.304  INFO 7744 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:31:13.306  INFO 7744 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:31:13.320  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@5b14cfb4]
+2023-08-18 14:31:13.321  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@5b14cfb4]
+2023-08-18 14:31:13.340  INFO 7744 --- [http-nio-8080-exec-5] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-08-18 14:31:13.353  INFO 7744 --- [http-nio-8080-exec-5] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-18 14:31:13.368  INFO 7744 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:31:13.368  INFO 7744 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:31:13.368  INFO 7744 --- [http-nio-8080-exec-5] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692354673368
+2023-08-18 14:31:13.383  INFO 7744 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition notify-0 to 0 since the associated topicId changed from null to OsJoqsUaRHSuLrWuAEwzPw
+2023-08-18 14:31:13.384  INFO 7744 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: XefsYb2rS1uMW1iPD8PFrw
+2023-08-18 14:31:13.389  INFO 7744 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1000 with epoch 0
+2023-08-18 14:31:13.400  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:31:13.401  INFO 7744 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 14:33:37.578  INFO 7744 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:33:37.579  INFO 7744 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:33:37.583  INFO 7744 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@4a9b8825]
+2023-08-18 14:33:37.587  INFO 7744 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@4a9b8825]
+2023-08-18 14:33:37.588  INFO 7744 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:33:37.589  INFO 7744 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 14:35:58.545  INFO 7744 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-18 14:35:58.550  INFO 7744 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:35:58.550  INFO 7744 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:35:58.551  INFO 7744 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:35:58.551  INFO 7744 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-08-18 14:35:58.553  INFO 7744 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:35:58.556  INFO 7744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-18 14:35:58.559  INFO 7744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-18 14:36:01.644  INFO 20372 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 20372 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 14:36:01.646  INFO 20372 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 14:36:01.737  INFO 20372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 14:36:02.664  INFO 20372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 14:36:02.750  INFO 20372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2023-08-18 14:36:02.972  INFO 20372 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 14:36:03.745  INFO 20372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 14:36:03.754  INFO 20372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 14:36:03.754  INFO 20372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 14:36:03.865  INFO 20372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 14:36:03.865  INFO 20372 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2127 ms
+2023-08-18 14:36:04.144  INFO 20372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 14:36:04.287  INFO 20372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 14:36:04.445  INFO 20372 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 14:36:04.589  INFO 20372 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 14:36:04.980  INFO 20372 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 14:36:05.043  INFO 20372 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 14:36:05.119  INFO 20372 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 14:36:05.164  INFO 20372 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 14:36:05.326  INFO 20372 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 14:36:05.443  INFO 20372 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 14:36:06.094  INFO 20372 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 14:36:06.114  INFO 20372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:36:06.806  WARN 20372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 14:36:07.272  INFO 20372 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4018706c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57095468, org.springframework.security.web.context.SecurityContextPersistenceFilter@1322fcf5, org.springframework.security.web.header.HeaderWriterFilter@120367ae, org.springframework.security.web.authentication.logout.LogoutFilter@19325518, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@67420cdf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7724d724, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16c57360, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b2b0e6a, org.springframework.security.web.session.SessionManagementFilter@7c889427, org.springframework.security.web.access.ExceptionTranslationFilter@51dba2a8, org.springframework.security.web.access.intercept.AuthorizationFilter@d1352bd]
+2023-08-18 14:36:07.974  INFO 20372 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 14:36:08.041  INFO 20372 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:36:08.042  INFO 20372 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:36:08.042  INFO 20372 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692354968040
+2023-08-18 14:36:08.388  INFO 20372 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 14:36:08.395  INFO 20372 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:36:08.395  INFO 20372 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:36:08.396  INFO 20372 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:36:08.466  INFO 20372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 14:36:08.558  INFO 20372 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 7.568 seconds (JVM running for 8.706)
+2023-08-18 14:36:17.286  INFO 20372 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 14:36:17.558  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.findTokenEntityByToken() with argument[s] = [lv4B_7yAO3ZhGY22qE1EwUwQJ3z6Ah5W5WAe3C3WgwQzmr_Yz27pgLrW95AoeKDQyShwL2cELGR8ZClsqao44w]
+2023-08-18 14:36:17.693  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = com.smartCode.ecommerce.model.entity.token.TokenEntity@1f7e8c68
+2023-08-18 14:36:17.708  INFO 20372 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:36:17.709  INFO 20372 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:36:17.908  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@68e9e761]
+2023-08-18 14:36:17.915  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@68e9e761]
+2023-08-18 14:36:45.327  INFO 20372 --- [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-08-18 14:36:45.391  INFO 20372 --- [http-nio-8080-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-18 14:36:45.459  INFO 20372 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:36:45.459  INFO 20372 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:36:45.460  INFO 20372 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692355005459
+2023-08-18 14:36:45.474  INFO 20372 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: XefsYb2rS1uMW1iPD8PFrw
+2023-08-18 14:36:45.475  INFO 20372 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1001 with epoch 0
+2023-08-18 14:36:45.494  INFO 20372 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition notify-0 to 0 since the associated topicId changed from null to OsJoqsUaRHSuLrWuAEwzPw
+2023-08-18 14:48:57.381  WARN 20372 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m12s94ms162µs700ns).
+2023-08-18 14:48:57.386  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:48:57.386  INFO 20372 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-08-18 14:48:57.388  INFO 20372 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 14:48:57.408  INFO 20372 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Cancelled in-flight PRODUCE request with correlation id 5 due to node 1 being disconnected (elapsed time since creation: 731799ms, elapsed time since send: 731799ms, request timeout: 30000ms)
+2023-08-18 14:48:57.409  INFO 20372 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-08-18 14:48:57.423 ERROR 20372 --- [kafka-producer-network-thread | producer-1] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@68e9e761' to topic notify:
+
+org.apache.kafka.common.errors.NetworkException: Disconnected from node 1
+
+2023-08-18 14:48:57.424  WARN 20372 --- [kafka-producer-network-thread | producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-1] Received invalid metadata error in produce request on partition notify-0 due to org.apache.kafka.common.errors.NetworkException: Disconnected from node 1. Going to request metadata update now
+2023-08-18 14:48:57.424  INFO 20372 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1001 with epoch 1
+2023-08-18 14:49:25.167  INFO 20372 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:49:25.167  INFO 20372 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:49:25.170  INFO 20372 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@299582fb]
+2023-08-18 14:49:25.175  INFO 20372 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@299582fb]
+2023-08-18 14:50:17.458  INFO 20372 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:50:42.391  INFO 20372 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 14:51:40.988  INFO 20372 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-18 14:51:40.993  INFO 20372 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:51:40.993  INFO 20372 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:51:40.994  INFO 20372 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:51:40.994  INFO 20372 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-08-18 14:51:40.998  INFO 20372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:51:41.000  INFO 20372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-18 14:51:41.004  INFO 20372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-18 14:51:44.118  INFO 15208 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 15208 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 14:51:44.120  INFO 15208 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 14:51:44.222  INFO 15208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 14:51:44.995  INFO 15208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 14:51:45.055  INFO 15208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2023-08-18 14:51:45.256  INFO 15208 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 14:51:45.912  INFO 15208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 14:51:45.919  INFO 15208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 14:51:45.919  INFO 15208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 14:51:46.011  INFO 15208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 14:51:46.011  INFO 15208 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1787 ms
+2023-08-18 14:51:46.259  INFO 15208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 14:51:46.363  INFO 15208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 14:51:46.488  INFO 15208 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 14:51:46.623  INFO 15208 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 14:51:46.945  INFO 15208 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 14:51:47.016  INFO 15208 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 14:51:47.078  INFO 15208 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 14:51:47.111  INFO 15208 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 14:51:47.250  INFO 15208 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 14:51:47.328  INFO 15208 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 14:51:47.806  INFO 15208 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 14:51:47.813  INFO 15208 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 14:51:48.345  WARN 15208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 14:51:48.706  INFO 15208 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18908e9e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54fd0b03, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ea927f1, org.springframework.security.web.header.HeaderWriterFilter@3e92df3f, org.springframework.security.web.authentication.logout.LogoutFilter@6faf8b34, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@515af05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9e6ef7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@466f9db2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6998a93a, org.springframework.security.web.session.SessionManagementFilter@290f79b2, org.springframework.security.web.access.ExceptionTranslationFilter@4569fe22, org.springframework.security.web.access.intercept.AuthorizationFilter@f987738]
+2023-08-18 14:51:49.251  INFO 15208 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 14:51:49.299  INFO 15208 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:51:49.299  INFO 15208 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:51:49.301  INFO 15208 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692355909299
+2023-08-18 14:51:49.629  INFO 15208 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 14:51:49.636  INFO 15208 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 14:51:49.637  INFO 15208 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 14:51:49.637  INFO 15208 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 14:51:49.695  INFO 15208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 14:51:49.793  INFO 15208 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 6.403 seconds (JVM running for 7.699)
+2023-08-18 14:51:59.088  INFO 15208 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 14:51:59.314  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.findTokenEntityByToken() with argument[s] = [lv4B_7yAO3ZhGY22qE1EwUwQJ3z6Ah5W5WAe3C3WgwQzmr_Yz27pgLrW95AoeKDQyShwL2cELGR8ZClsqao44w]
+2023-08-18 14:51:59.447  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = com.smartCode.ecommerce.model.entity.token.TokenEntity@466061ec
+2023-08-18 14:51:59.460  INFO 15208 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:51:59.462  INFO 15208 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 14:51:59.611  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6c524adc]
+2023-08-18 14:51:59.615  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6c524adc]
+2023-08-18 14:51:59.626  INFO 15208 --- [http-nio-8080-exec-4] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-08-18 14:51:59.642  INFO 15208 --- [http-nio-8080-exec-4] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-18 14:51:59.660  INFO 15208 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 14:51:59.660  INFO 15208 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 14:51:59.660  INFO 15208 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692355919660
+2023-08-18 14:51:59.673  INFO 15208 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition notify-0 to 0 since the associated topicId changed from null to OsJoqsUaRHSuLrWuAEwzPw
+2023-08-18 14:51:59.675  INFO 15208 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: XefsYb2rS1uMW1iPD8PFrw
+2023-08-18 14:51:59.676  INFO 15208 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1002 with epoch 0
+2023-08-18 14:51:59.697  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 14:51:59.701  INFO 15208 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:00:42.485  INFO 15208 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-18 15:00:42.490  INFO 15208 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 15:00:42.492  INFO 15208 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 15:00:42.492  INFO 15208 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 15:00:42.493  INFO 15208 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-08-18 15:00:42.497  INFO 15208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 15:00:42.500  INFO 15208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-18 15:00:42.507  INFO 15208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-18 15:00:46.034  INFO 24428 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 24428 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 15:00:46.036  INFO 24428 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 15:00:46.103  INFO 24428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 15:00:46.880  INFO 24428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 15:00:46.945  INFO 24428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2023-08-18 15:00:47.131  INFO 24428 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 15:00:47.742  INFO 24428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 15:00:47.748  INFO 24428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 15:00:47.748  INFO 24428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 15:00:47.826  INFO 24428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 15:00:47.826  INFO 24428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1721 ms
+2023-08-18 15:00:48.110  INFO 24428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 15:00:48.213  INFO 24428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 15:00:48.309  INFO 24428 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 15:00:48.490  INFO 24428 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 15:00:48.839  INFO 24428 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 15:00:48.925  INFO 24428 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 15:00:48.992  INFO 24428 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 15:00:49.020  INFO 24428 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 15:00:49.139  INFO 24428 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 15:00:49.216  INFO 24428 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 15:00:49.710  INFO 24428 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 15:00:49.717  INFO 24428 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 15:00:50.341  WARN 24428 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 15:00:50.759  INFO 24428 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e261169, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5badeb76, org.springframework.security.web.context.SecurityContextPersistenceFilter@7854e45a, org.springframework.security.web.header.HeaderWriterFilter@7590776b, org.springframework.security.web.authentication.logout.LogoutFilter@72193e11, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@4bfd4531, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2abe6a56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f6318e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cd77ac0, org.springframework.security.web.session.SessionManagementFilter@3dad9ccf, org.springframework.security.web.access.ExceptionTranslationFilter@72604b82, org.springframework.security.web.access.intercept.AuthorizationFilter@7f65912]
+2023-08-18 15:00:51.316  INFO 24428 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 15:00:51.365  INFO 24428 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 15:00:51.365  INFO 24428 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 15:00:51.365  INFO 24428 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692356451364
+2023-08-18 15:00:51.646  INFO 24428 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 15:00:51.654  INFO 24428 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 15:00:51.654  INFO 24428 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 15:00:51.656  INFO 24428 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 15:00:51.705  INFO 24428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 15:00:51.792  INFO 24428 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 6.342 seconds (JVM running for 7.365)
+2023-08-18 15:01:07.626  INFO 24428 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 15:01:07.843  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.findTokenEntityByToken() with argument[s] = [lv4B_7yAO3ZhGY22qE1EwUwQJ3z6Ah5W5WAe3C3WgwQzmr_Yz27pgLrW95AoeKDQyShwL2cELGR8ZClsqao44w]
+2023-08-18 15:01:08.071  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = com.smartCode.ecommerce.model.entity.token.TokenEntity@666cf36a
+2023-08-18 15:01:08.170  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:01:08.172  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:01:08.266  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@72e49b1e]
+2023-08-18 15:01:08.270  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@72e49b1e]
+2023-08-18 15:01:08.278  INFO 24428 --- [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-08-18 15:01:08.291  INFO 24428 --- [http-nio-8080-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-18 15:01:08.306  INFO 24428 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 15:01:08.307  INFO 24428 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 15:01:08.307  INFO 24428 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692356468306
+2023-08-18 15:01:08.545  INFO 24428 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition notify-0 to 0 since the associated topicId changed from null to OsJoqsUaRHSuLrWuAEwzPw
+2023-08-18 15:01:08.546  INFO 24428 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: XefsYb2rS1uMW1iPD8PFrw
+2023-08-18 15:01:08.547  INFO 24428 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1003 with epoch 0
+2023-08-18 15:01:08.564  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:01:08.567  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:04:59.130  INFO 24428 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:04:59.131  INFO 24428 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:04:59.136  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6bf61976]
+2023-08-18 15:04:59.240  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6bf61976]
+2023-08-18 15:04:59.241  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:04:59.241  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:44.502  INFO 24428 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:44.503  INFO 24428 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:44.508  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@564fe768]
+2023-08-18 15:07:44.511  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@564fe768]
+2023-08-18 15:07:44.511  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:44.511  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:45.402  INFO 24428 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:45.403  INFO 24428 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:45.411  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@13644ebd]
+2023-08-18 15:07:45.413  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@13644ebd]
+2023-08-18 15:07:45.414  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:45.414  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:46.258  INFO 24428 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:46.260  INFO 24428 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:46.265  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6dce96e7]
+2023-08-18 15:07:46.268  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6dce96e7]
+2023-08-18 15:07:46.270  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:46.270  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:47.057  INFO 24428 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:47.057  INFO 24428 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:47.062  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@56d8e3a]
+2023-08-18 15:07:47.064  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@56d8e3a]
+2023-08-18 15:07:47.065  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:47.065  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:47.711  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:47.711  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:47.711  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6d9c6c58]
+2023-08-18 15:07:47.717  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6d9c6c58]
+2023-08-18 15:07:47.717  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:47.717  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:48.387  INFO 24428 --- [http-nio-8080-exec-3] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:48.389  INFO 24428 --- [http-nio-8080-exec-3] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:48.395  INFO 24428 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@752d0eaf]
+2023-08-18 15:07:48.398  INFO 24428 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@752d0eaf]
+2023-08-18 15:07:48.398  INFO 24428 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:48.398  INFO 24428 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:49.045  INFO 24428 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:49.045  INFO 24428 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:49.053  INFO 24428 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@f6b9ab3]
+2023-08-18 15:07:49.056  INFO 24428 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@f6b9ab3]
+2023-08-18 15:07:49.057  INFO 24428 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:49.057  INFO 24428 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:49.623  INFO 24428 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:49.626  INFO 24428 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:49.628  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@4d290948]
+2023-08-18 15:07:49.631  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@4d290948]
+2023-08-18 15:07:49.632  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:49.632  INFO 24428 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:50.260  INFO 24428 --- [http-nio-8080-exec-6] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:50.261  INFO 24428 --- [http-nio-8080-exec-6] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:50.263  INFO 24428 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@43986b6c]
+2023-08-18 15:07:50.265  INFO 24428 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@43986b6c]
+2023-08-18 15:07:50.266  INFO 24428 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:50.266  INFO 24428 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:50.822  INFO 24428 --- [http-nio-8080-exec-7] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:50.822  INFO 24428 --- [http-nio-8080-exec-7] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:50.822  INFO 24428 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@441468ce]
+2023-08-18 15:07:50.828  INFO 24428 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@441468ce]
+2023-08-18 15:07:50.829  INFO 24428 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:50.829  INFO 24428 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:51.393  INFO 24428 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:51.394  INFO 24428 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:51.396  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@5cb78c18]
+2023-08-18 15:07:51.398  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@5cb78c18]
+2023-08-18 15:07:51.399  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:51.400  INFO 24428 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:51.969  INFO 24428 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:51.970  INFO 24428 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:51.973  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@25be9359]
+2023-08-18 15:07:51.975  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@25be9359]
+2023-08-18 15:07:51.975  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:51.975  INFO 24428 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:52.617  INFO 24428 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:52.618  INFO 24428 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:52.620  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6736fd97]
+2023-08-18 15:07:52.623  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6736fd97]
+2023-08-18 15:07:52.623  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:52.623  INFO 24428 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:55.001  INFO 24428 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:55.002  INFO 24428 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:55.013  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6b789bbd]
+2023-08-18 15:07:55.016  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@6b789bbd]
+2023-08-18 15:07:55.017  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:55.017  INFO 24428 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:07:55.825  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:55.826  INFO 24428 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:07:55.830  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@17f2cb50]
+2023-08-18 15:07:55.837  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@17f2cb50]
+2023-08-18 15:07:55.837  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:07:55.837  INFO 24428 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:10:25.889  INFO 24428 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-08-18 15:16:27.623  INFO 24428 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-18 15:16:27.626  INFO 24428 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 15:16:27.626  INFO 24428 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 15:16:27.626  INFO 24428 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 15:16:27.627  INFO 24428 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-08-18 15:16:27.629  INFO 24428 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 15:16:27.631  INFO 24428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-18 15:16:27.636  INFO 24428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-18 15:16:30.949  INFO 5856 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.7 on DESKTOP-VP77UFN with PID 5856 (C:\Users\Admin\IdeaProjects\ecommerce\ecommerce\target\classes started by Admin in C:\Users\Admin\IdeaProjects\ecommerce)
+2023-08-18 15:16:30.952  INFO 5856 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-08-18 15:16:31.021  INFO 5856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-18 15:16:31.538  INFO 5856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-18 15:16:31.586  INFO 5856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2023-08-18 15:16:31.733  INFO 5856 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1c0fe07-b9d1-332d-b488-c3b6211806b2
+2023-08-18 15:16:32.314  INFO 5856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-18 15:16:32.320  INFO 5856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-18 15:16:32.321  INFO 5856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.78]
+2023-08-18 15:16:32.400  INFO 5856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-18 15:16:32.400  INFO 5856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1378 ms
+2023-08-18 15:16:32.634  INFO 5856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-18 15:16:32.741  INFO 5856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-18 15:16:32.861  INFO 5856 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2023-08-18 15:16:32.966  INFO 5856 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2023-08-18 15:16:33.282  INFO 5856 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2023-08-18 15:16:33.349  INFO 5856 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2023-08-18 15:16:33.411  INFO 5856 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-18 15:16:33.445  INFO 5856 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-18 15:16:33.558  INFO 5856 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-18 15:16:33.638  INFO 5856 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-08-18 15:16:34.146  INFO 5856 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-18 15:16:34.154  INFO 5856 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-18 15:16:34.635  WARN 5856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-08-18 15:16:34.963  INFO 5856 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19d3fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c75f36a, org.springframework.security.web.context.SecurityContextPersistenceFilter@69c7d1da, org.springframework.security.web.header.HeaderWriterFilter@743389d4, org.springframework.security.web.authentication.logout.LogoutFilter@eff657a, com.smartCode.ecommerce.configuration.jwt.JwtTokenFilter@5408394a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c1356d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38ef46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55c26f27, org.springframework.security.web.session.SessionManagementFilter@147a2204, org.springframework.security.web.access.ExceptionTranslationFilter@35b8f010, org.springframework.security.web.access.intercept.AuthorizationFilter@4960b805]
+2023-08-18 15:16:35.463  INFO 5856 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-08-18 15:16:35.509  INFO 5856 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 15:16:35.510  INFO 5856 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 15:16:35.510  INFO 5856 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692357395509
+2023-08-18 15:16:35.794  INFO 5856 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-08-18 15:16:35.802  INFO 5856 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 15:16:35.802  INFO 5856 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 15:16:35.803  INFO 5856 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 15:16:35.849  INFO 5856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-18 15:16:35.935  INFO 5856 --- [restartedMain] c.s.ecommerce.EcommerceApplication       : Started EcommerceApplication in 5.41 seconds (JVM running for 6.007)
+2023-08-18 15:16:42.100  INFO 5856 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-18 15:16:42.294  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl.findTokenEntityByToken() with argument[s] = [lv4B_7yAO3ZhGY22qE1EwUwQJ3z6Ah5W5WAe3C3WgwQzmr_Yz27pgLrW95AoeKDQyShwL2cELGR8ZClsqao44w]
+2023-08-18 15:16:42.383  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.token.impl.TokenServiceImpl() with result = com.smartCode.ecommerce.model.entity.token.TokenEntity@63a13979
+2023-08-18 15:16:42.391  INFO 5856 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:42.391  INFO 5856 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:42.474  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@51dea24c]
+2023-08-18 15:16:42.476  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@51dea24c]
+2023-08-18 15:16:42.483  INFO 5856 --- [http-nio-8080-exec-4] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 1024
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-08-18 15:16:42.493  INFO 5856 --- [http-nio-8080-exec-4] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-18 15:16:42.503  INFO 5856 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.2
+2023-08-18 15:16:42.503  INFO 5856 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f8c67dc3ae0a3265
+2023-08-18 15:16:42.503  INFO 5856 --- [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1692357402503
+2023-08-18 15:16:43.009  INFO 5856 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition notify-0 to 0 since the associated topicId changed from null to OsJoqsUaRHSuLrWuAEwzPw
+2023-08-18 15:16:43.010  INFO 5856 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: XefsYb2rS1uMW1iPD8PFrw
+2023-08-18 15:16:43.010  INFO 5856 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1004 with epoch 0
+2023-08-18 15:16:43.125  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:43.129  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:43.874  INFO 5856 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:43.874  INFO 5856 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:43.874  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@197b034]
+2023-08-18 15:16:43.891  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@197b034]
+2023-08-18 15:16:43.893  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:43.893  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:44.772  INFO 5856 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:44.775  INFO 5856 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:44.780  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@1245d814]
+2023-08-18 15:16:44.782  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@1245d814]
+2023-08-18 15:16:44.783  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:44.783  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:45.690  INFO 5856 --- [http-nio-8080-exec-3] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:45.690  INFO 5856 --- [http-nio-8080-exec-3] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:45.690  INFO 5856 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@540fdd4f]
+2023-08-18 15:16:45.702  INFO 5856 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@540fdd4f]
+2023-08-18 15:16:45.702  INFO 5856 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:45.702  INFO 5856 --- [http-nio-8080-exec-3] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:46.627  INFO 5856 --- [http-nio-8080-exec-6] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:46.629  INFO 5856 --- [http-nio-8080-exec-6] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:46.634  INFO 5856 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@1055516f]
+2023-08-18 15:16:46.641  INFO 5856 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@1055516f]
+2023-08-18 15:16:46.642  INFO 5856 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:46.642  INFO 5856 --- [http-nio-8080-exec-6] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:47.377  INFO 5856 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:47.378  INFO 5856 --- [http-nio-8080-exec-8] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:47.382  INFO 5856 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@7538ac91]
+2023-08-18 15:16:47.384  INFO 5856 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@7538ac91]
+2023-08-18 15:16:47.386  INFO 5856 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:47.386  INFO 5856 --- [http-nio-8080-exec-8] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:48.297  INFO 5856 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:48.298  INFO 5856 --- [http-nio-8080-exec-9] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:48.301  INFO 5856 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@10ff5639]
+2023-08-18 15:16:48.304  INFO 5856 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@10ff5639]
+2023-08-18 15:16:48.304  INFO 5856 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:48.305  INFO 5856 --- [http-nio-8080-exec-9] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:48.857  INFO 5856 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:48.858  INFO 5856 --- [http-nio-8080-exec-10] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:48.868  INFO 5856 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@752d0eaf]
+2023-08-18 15:16:48.870  INFO 5856 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@752d0eaf]
+2023-08-18 15:16:48.871  INFO 5856 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:48.872  INFO 5856 --- [http-nio-8080-exec-10] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:49.597  INFO 5856 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:49.600  INFO 5856 --- [http-nio-8080-exec-1] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:49.608  INFO 5856 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@3bd383f0]
+2023-08-18 15:16:49.611  INFO 5856 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@3bd383f0]
+2023-08-18 15:16:49.611  INFO 5856 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:49.611  INFO 5856 --- [http-nio-8080-exec-1] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:50.258  INFO 5856 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:50.259  INFO 5856 --- [http-nio-8080-exec-4] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:50.261  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@44f3ab47]
+2023-08-18 15:16:50.264  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@44f3ab47]
+2023-08-18 15:16:50.264  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:50.264  INFO 5856 --- [http-nio-8080-exec-4] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:50.839  INFO 5856 --- [http-nio-8080-exec-7] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:50.855  INFO 5856 --- [http-nio-8080-exec-7] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:50.862  INFO 5856 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@101eb122]
+2023-08-18 15:16:50.868  INFO 5856 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@101eb122]
+2023-08-18 15:16:50.869  INFO 5856 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:50.869  INFO 5856 --- [http-nio-8080-exec-7] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:51.508  INFO 5856 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:51.508  INFO 5856 --- [http-nio-8080-exec-2] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:51.511  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@249dfb4d]
+2023-08-18 15:16:51.513  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@249dfb4d]
+2023-08-18 15:16:51.514  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:51.514  INFO 5856 --- [http-nio-8080-exec-2] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:16:52.125  INFO 5856 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:52.126  INFO 5856 --- [http-nio-8080-exec-5] c.s.e.util.security.JwtTokenProvider     : get subject
+2023-08-18 15:16:52.138  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.controller.notification.NotificationController.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@18bdb364]
+2023-08-18 15:16:52.141  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Enter: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl.create() with argument[s] = [com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto@18bdb364]
+2023-08-18 15:16:52.142  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.service.notification.impl.NotificationServiceImpl() with result = null
+2023-08-18 15:16:52.144  INFO 5856 --- [http-nio-8080-exec-5] c.smartCode.ecommerce.aop.LoggingAspect  : Exit: com.smartCode.ecommerce.controller.notification.NotificationController() with result = <200 OK OK,[]>
+2023-08-18 15:25:43.073  INFO 5856 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-08-18 16:16:15.554  INFO 5856 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-18 16:16:15.559  INFO 5856 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-08-18 16:16:15.559  INFO 5856 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-18 16:16:15.563  INFO 5856 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-08-18 16:16:15.565  INFO 5856 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered

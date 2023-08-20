@@ -26,14 +26,21 @@ public class TokenServiceImpl implements TokenService {
     @Override
     @Transactional
     @CacheEvict(value = "token",allEntries = true)
-    public void deleteByUser(UserEntity user) {
-         tokenRepository.deleteByUser(user);
+    public void deleteByUserAndToken(UserEntity user,String token) {
+         tokenRepository.deleteByUserAndToken(user,token);
     }
 
     @Override
     @Transactional
     public void saveToken(TokenEntity tokenEntity) {
         tokenRepository.save(tokenEntity);
+    }
+
+    @Override
+    @Transactional
+    @CacheEvict(value = "token",allEntries = true)
+    public void deleteByUser(UserEntity user) {
+        tokenRepository.deleteByUser(user);
     }
 
     @Override

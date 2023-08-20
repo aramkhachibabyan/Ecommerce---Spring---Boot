@@ -1,4 +1,4 @@
-package com.smartCode.ecommerce.model.dto.user;
+package com.smartCode.ecommerce.model.dto.user.update;
 
 import com.smartCode.ecommerce.util.constants.Gender;
 import lombok.Getter;

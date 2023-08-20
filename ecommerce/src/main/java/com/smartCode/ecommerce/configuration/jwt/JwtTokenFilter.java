@@ -21,7 +21,6 @@ import java.io.IOException;
 
 import static org.springframework.util.ObjectUtils.isEmpty;
 
-@Slf4j
 @Component
 @RequiredArgsConstructor
 public class JwtTokenFilter extends OncePerRequestFilter {

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class ResponseUserDto extends UserDto{
+public class ResponseUserDto extends BaseUserDto {
 
     private Integer id;
 

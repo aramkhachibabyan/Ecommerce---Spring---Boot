@@ -1,15 +1,15 @@
 package com.smartCode.ecommerce.mapper;
 
-import com.smartCode.ecommerce.model.dto.user.CreateUserDto;
 import com.smartCode.ecommerce.model.dto.user.ResponseUserDto;
-import com.smartCode.ecommerce.model.dto.user.UpdateUserDto;
+import com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto;
+import com.smartCode.ecommerce.model.dto.user.update.UpdateBaseUserDto;
 import com.smartCode.ecommerce.model.entity.user.UserEntity;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T01:29:15+0400",
+    date = "2023-08-19T14:30:58+0400",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.7 (Oracle Corporation)"
 )
 @Component
@@ -61,7 +61,7 @@ public class UserMapperImpl implements UserMapper {
     }
 
     @Override
-    public UserEntity toEntity(UpdateUserDto updateUserDto, UserEntity userEntity) {
+    public UserEntity toEntity(UpdateBaseUserDto updateUserDto, UserEntity userEntity) {
         if ( updateUserDto == null ) {
             return userEntity;
         }

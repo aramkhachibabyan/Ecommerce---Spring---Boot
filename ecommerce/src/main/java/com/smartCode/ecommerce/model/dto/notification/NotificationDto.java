@@ -17,7 +17,7 @@ public class NotificationDto {
     private String title;
 
     @NotBlank
-    private  String content;
+    private String content;
 
     private String description;
 
@@ -26,7 +26,8 @@ public class NotificationDto {
 
     @Email
     @NotBlank
-    private String  email;
+    private String email;
 
+    @Positive
     private Integer userId;
 }

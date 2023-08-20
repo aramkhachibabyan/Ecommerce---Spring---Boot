@@ -11,6 +11,8 @@ public interface TokenRepository extends JpaRepository<TokenEntity, Integer> {
     TokenEntity findTokenEntityByToken(String token);
 
 //    @CacheEvict(value = "tokens",key = "#token")
+    void deleteByUserAndToken(UserEntity user,String token);
+
     void deleteByUser(UserEntity user);
 
     TokenEntity findTokenEntityByUserId(Integer id);

@@ -1,4 +1,4 @@
-package com.smartCode.ecommerce.model.dto.user;
+package com.smartCode.ecommerce.model.dto.user.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

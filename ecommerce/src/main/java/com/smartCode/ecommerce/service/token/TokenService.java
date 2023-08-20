@@ -6,6 +6,7 @@ import com.smartCode.ecommerce.model.entity.user.UserEntity;
 public interface TokenService {
     TokenEntity findTokenEntityByToken(String token);
 
+    void deleteByUserAndToken(UserEntity user,String token);
     void deleteByUser(UserEntity user);
 
     void saveToken(TokenEntity tokenEntity);

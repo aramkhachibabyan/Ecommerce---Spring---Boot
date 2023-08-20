@@ -8,8 +8,11 @@ import com.smartCode.ecommerce.model.dto.product.ResponseProductDto;
 import com.smartCode.ecommerce.model.dto.product.UpdateProductDto;
 import com.smartCode.ecommerce.model.entity.product.ProductEntity;
 import com.smartCode.ecommerce.repository.product.ProductRepository;
+import com.smartCode.ecommerce.service.action.ActionService;
 import com.smartCode.ecommerce.service.product.ProductService;
+import com.smartCode.ecommerce.util.constants.Actions;
 import com.smartCode.ecommerce.util.constants.Message;
+import com.smartCode.ecommerce.util.constants.entityTypes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +27,7 @@ import static java.util.Objects.nonNull;
 public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
+    private final ActionService actionService;
 
     @Override
     @Transactional(readOnly = true)
@@ -38,6 +42,7 @@ public class ProductServiceImpl implements ProductService {
         ProductEntity productEntity = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("aaaaa"));
         ProductEntity entity = productMapper.toEntity(updateProductDto, productEntity);
         ProductEntity save = productRepository.save(entity);
+        actionService.create(save.getId(), Actions.UPDATE, entityTypes.PRODUCT);
         return productMapper.toDto(save);
     }
 
@@ -52,6 +57,7 @@ public class ProductServiceImpl implements ProductService {
         product.setPrice(nonNull(productDto.getPrice()) ? productDto.getPrice() : product.getPrice());
         product.setDescription(nonNull(productDto.getDescription()) ? productDto.getDescription() : product.getDescription());
         ProductEntity save = productRepository.save(product);
+        actionService.create(save.getId(), Actions.UPDATE, entityTypes.PRODUCT);
         return productMapper.toDto(save);
     }
 
@@ -60,6 +66,7 @@ public class ProductServiceImpl implements ProductService {
     public ResponseProductDto delete(Integer id) {
         ProductEntity product = productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("   "));
         productRepository.delete(product);
+        actionService.create(id, Actions.DELETE, entityTypes.PRODUCT);
         return productMapper.toDto(product);
     }
 
@@ -79,6 +86,7 @@ public class ProductServiceImpl implements ProductService {
     public ResponseProductDto create(CreateProductDto createProductDto) {
         ProductEntity entity = productMapper.toEntity(createProductDto);
         ProductEntity save = productRepository.save(entity);
+        actionService.create(save.getId(), Actions.CREATE, entityTypes.PRODUCT);
         return productMapper.toDto(save);
     }
 }

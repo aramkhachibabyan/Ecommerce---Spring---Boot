@@ -1,4 +1,4 @@
-package com.smartCode.ecommerce.model.dto.user;
+package com.smartCode.ecommerce.model.dto.user.auth;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,13 +6,13 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-
-@Setter
 @Getter
-public class CreateUserDto extends UserDto{
+@Setter
+public class UserLoginDto {
 
+    @NotBlank
+    private String username;
     @NotBlank
     @Size(min = 8)
     private String password;
-
 }

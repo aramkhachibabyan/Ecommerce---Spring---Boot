@@ -24,8 +24,9 @@ public class NotificationController {
 
     @PostMapping
     @PreAuthorize("hasRole('" + Roles.ROLE_USER + "')")
-    public ResponseEntity<ResponseNotificationDto> create(@RequestBody @Valid CreateNotificationDto dto) {
-        return ResponseEntity.ok(notificationService.create(dto));
+    public ResponseEntity<Void> create(@RequestBody @Valid CreateNotificationDto dto) {
+        notificationService.create(dto);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/ready")

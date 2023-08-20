@@ -1,4 +1,4 @@
-package com.smartCode.ecommerce.model.dto.user;
+package com.smartCode.ecommerce.model.dto.user.update;
 
 import lombok.Getter;
 import lombok.Setter;

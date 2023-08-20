@@ -44,7 +44,8 @@ public class ProductAdminController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<ResponseProductDto> updateProduct(@PathVariable @Positive Integer id, @RequestBody @Valid UpdateProductDto productDto) {
+    public ResponseEntity<ResponseProductDto> updateProduct(@PathVariable @Positive Integer id,
+                                                            @RequestBody @Valid UpdateProductDto productDto) {
         return ResponseEntity.ok(productService.updateProduct(id, productDto));
     }
 

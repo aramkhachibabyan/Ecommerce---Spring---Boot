@@ -1,14 +1,13 @@
 package com.smartCode.ecommerce.service.user;
 
-import com.smartCode.ecommerce.model.dto.user.ChangePasswordUserDto;
-import com.smartCode.ecommerce.model.dto.user.CreateUserDto;
-import com.smartCode.ecommerce.model.dto.user.FilterSearchUser;
-import com.smartCode.ecommerce.model.dto.user.PartialUpdateUserDto;
 import com.smartCode.ecommerce.model.dto.user.ResponseUserDto;
-import com.smartCode.ecommerce.model.dto.user.UpdateUserDto;
-import com.smartCode.ecommerce.model.dto.user.UserAuthDto;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestParam;
+import com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto;
+import com.smartCode.ecommerce.model.dto.user.update.ChangePasswordUserDto;
+import com.smartCode.ecommerce.model.dto.user.update.PartialUpdateUserDto;
+import com.smartCode.ecommerce.model.dto.user.update.UpdateBaseUserDto;
+import com.smartCode.ecommerce.model.dto.user.auth.UserAuthDto;
+import com.smartCode.ecommerce.model.dto.user.auth.UserLoginDto;
+import com.smartCode.ecommerce.model.dto.user.auth.VerificationDto;
 
 import java.util.List;
 
@@ -18,18 +17,19 @@ public interface UserService {
 
     ResponseUserDto getById(Integer id);
 
-    ResponseUserDto verify(Integer id, String code);
+    ResponseUserDto verify(VerificationDto dto);
 
     ResponseUserDto updatePartially(Integer id, PartialUpdateUserDto updatedUser);
 
-    UserAuthDto login(String email, String password);
+    UserAuthDto login(UserLoginDto dto);
 
     ResponseUserDto delete(Integer id);
 
-    ResponseUserDto updateUser(Integer id,UpdateUserDto updatedUser);
+    ResponseUserDto updateUser(Integer id, UpdateBaseUserDto updatedUser);
     ResponseUserDto changePassword(Integer id, ChangePasswordUserDto dto);
 
-    void logout();
+
+    void logout(String token);
 
 //    List<ResponseUserDto> search(FilterSearchUser.Search userSearch);
 //

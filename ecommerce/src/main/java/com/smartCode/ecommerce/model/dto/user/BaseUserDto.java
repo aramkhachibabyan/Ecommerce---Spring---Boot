@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class UserDto {
+public class BaseUserDto {
 
     @NotBlank
     private String name;

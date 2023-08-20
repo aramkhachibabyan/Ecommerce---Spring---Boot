@@ -5,8 +5,11 @@ import com.smartCode.ecommerce.feign.CardFeignClient;
 import com.smartCode.ecommerce.model.dto.card.CardDto;
 import com.smartCode.ecommerce.model.dto.card.CreateCardDto;
 import com.smartCode.ecommerce.model.dto.card.ResponseCardDto;
+import com.smartCode.ecommerce.service.action.ActionService;
 import com.smartCode.ecommerce.service.card.CardService;
+import com.smartCode.ecommerce.util.constants.Actions;
 import com.smartCode.ecommerce.util.constants.Message;
+import com.smartCode.ecommerce.util.constants.entityTypes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -25,6 +28,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class CardServiceImpl implements CardService {
     private final CardFeignClient cardFeignClient;
+    private final ActionService actionService;
 
     @Transactional
     @Override
@@ -32,18 +36,24 @@ public class CardServiceImpl implements CardService {
         if (createCardDto.getCardNumber().length()!=16){
             throw new ValidationException(Message.INVALID_CARD_NUMBER);
         }
-        return cardFeignClient.createCard(createCardDto).getBody();
+        ResponseCardDto body = cardFeignClient.createCard(createCardDto).getBody();
+        actionService.create(createCardDto.getUserId(), Actions.CREATE, entityTypes.CARD);
+        return body;
     }
 
     @Override
     @Transactional
     public void deleteCardsByUserId(Integer userId) {
         cardFeignClient.deleteCardsByUserId(userId);
+        actionService.create(userId, Actions.DELETE, entityTypes.CARD);
+
     }
 
     @Override
     @Transactional
     public ResponseCardDto deleteCardById(Integer id) {
+        actionService.create(id, Actions.DELETE, entityTypes.CARD);
+
         return cardFeignClient.deleteCardById(id).getBody();
     }
 

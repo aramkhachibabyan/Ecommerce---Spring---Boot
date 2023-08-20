@@ -1,0 +1,2 @@
+role_id,age,code,is_verified,phone,day_of_birth,username,name,lastname,email,gender,password
+2,21,123456,true,+37497171717,2002-05-03,admin,Aram,Khachibabyan,aramkhachibabyan@gmail.com,MALE,$2a$10$KUR4gfwcici.XktwpkgAXuhR8/lE6TmUbugtIyWVSJV/UnbrElvd2

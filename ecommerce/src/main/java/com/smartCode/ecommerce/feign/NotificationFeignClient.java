@@ -3,9 +3,11 @@ package com.smartCode.ecommerce.feign;
 import com.smartCode.ecommerce.configuration.MicroServiceFeignConfiguration;
 import com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto;
 import com.smartCode.ecommerce.model.dto.notification.ResponseNotificationDto;
+import com.smartCode.ecommerce.model.dto.notification.VerifyNotificationDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,8 +27,7 @@ public interface NotificationFeignClient {
     ResponseEntity<List<ResponseNotificationDto>> getSent(@RequestParam Integer userId);
 
     @PostMapping("/verify")
-    ResponseEntity<Void> verify(@RequestParam String email,
-                                @RequestParam String code);
+    ResponseEntity<Void> verify(@RequestBody VerifyNotificationDto dto);
 
 
 }

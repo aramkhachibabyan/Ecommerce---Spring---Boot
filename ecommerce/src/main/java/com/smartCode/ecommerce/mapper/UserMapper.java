@@ -1,8 +1,8 @@
 package com.smartCode.ecommerce.mapper;
 
-import com.smartCode.ecommerce.model.dto.user.CreateUserDto;
+import com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto;
 import com.smartCode.ecommerce.model.dto.user.ResponseUserDto;
-import com.smartCode.ecommerce.model.dto.user.UpdateUserDto;
+import com.smartCode.ecommerce.model.dto.user.update.UpdateBaseUserDto;
 import com.smartCode.ecommerce.model.entity.user.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
@@ -13,5 +13,5 @@ public interface UserMapper {
 
     ResponseUserDto toDto(UserEntity user);
 
-    UserEntity toEntity(UpdateUserDto updateUserDto, @MappingTarget UserEntity userEntity);
+    UserEntity toEntity(UpdateBaseUserDto updateUserDto, @MappingTarget UserEntity userEntity);
 }
