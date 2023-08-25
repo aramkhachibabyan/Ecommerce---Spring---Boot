@@ -20,3 +20,10 @@ databaseChangeLog:
         - loadData:
             tableName: users
             file: classpath:/db/changelog/admin.csv
+  - changeSet:
+      id: 4
+      author: Aram
+      changes:
+        - loadData:
+            tableName: products
+            file: classpath:/db/changelog/products.csv

@@ -28,6 +28,7 @@ public class KafkaProducerConfig {
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         configProps.put(ProducerConfig.BATCH_SIZE_CONFIG, 1024);
+        configProps.put(JsonSerializer.TYPE_MAPPINGS, "notify:com.smartCode.ecommerce.model.dto.notification.CreateNotificationDto");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
@@ -38,6 +39,7 @@ public class KafkaProducerConfig {
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         configProps.put(ProducerConfig.BATCH_SIZE_CONFIG, 1024);
+        configProps.put(JsonSerializer.TYPE_MAPPINGS, "activity:com.smartCode.ecommerce.model.dto.action.CreateActionDto");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 

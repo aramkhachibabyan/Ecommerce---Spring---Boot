@@ -6,4 +6,6 @@ public interface Actions {
     String CREATE = "Create";
     String DELETE = "Delete";
     String UPDATE = "Update";
+    String LOGIN = "Login";
+    String VERIFY = "Verify";
 }

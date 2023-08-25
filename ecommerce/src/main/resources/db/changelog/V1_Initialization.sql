@@ -59,3 +59,42 @@ create table IF NOT EXISTS tokens
             references users
 );
 
+create table basket
+(
+    id         serial primary key,
+    count      integer not null,
+    product_id integer not null
+        constraint fkpsbpg5lc7uk06uixvl9ehdkvt
+            references products,
+    user_id    integer not null
+        constraint fk810a8gq30miyp6j1eub97qm6k
+            references users
+);
+
+create table orders
+(
+    id           serial primary key,
+    created_at   timestamp,
+    updated_at   timestamp,
+    note         varchar(255),
+    status       varchar(255)   not null,
+    total_amount numeric(19, 2) not null,
+    total_count  integer        not null,
+    user_id      integer        not null
+        constraint fk32ql8ubntj5uh44ph9659tiih
+            references users
+);
+
+create table order_items
+(
+    id          serial primary key,
+    created_at  timestamp,
+    updated_at  timestamp,
+    product_id  integer   not null,
+    count       integer        not null,
+    total_price numeric(19, 2) not null,
+    order_id    integer        not null
+        constraint fkbioxgbv59vetrxe0ejfubep1w
+            references orders
+);
+

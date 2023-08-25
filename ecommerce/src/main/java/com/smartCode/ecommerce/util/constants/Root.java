@@ -1,5 +1,7 @@
 package com.smartCode.ecommerce.util.constants;
 
+import org.apache.kafka.common.protocol.types.Field;
+
 public interface Root {
 
     String IS_VERIFIED = "isVerified";
@@ -13,4 +15,6 @@ public interface Root {
     String NAME = "name";
     String LASTNAME = "lastName";
     String EMAIL = "email";
+    String PRODUCTION_DATE = "production_date";
+    String DESCRIPTION = "description";
 }

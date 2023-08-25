@@ -22,6 +22,7 @@ import com.smartCode.ecommerce.service.card.CardService;
 import com.smartCode.ecommerce.service.notification.NotificationService;
 import com.smartCode.ecommerce.service.token.TokenService;
 import com.smartCode.ecommerce.service.user.UserService;
+import com.smartCode.ecommerce.spec.user.UserSpecification;
 import com.smartCode.ecommerce.util.RandomGenerator;
 import com.smartCode.ecommerce.util.constants.Actions;
 import com.smartCode.ecommerce.util.constants.Message;
@@ -59,6 +60,7 @@ public class UserServiceImpl implements UserService {
     private final NotificationService notificationService;
     private final VerificationEventPublisher verificationEventPublisher;
     private final ActionServiceImpl actionService;
+    private final UserSpecification extractor;
 
     @Override
     @Transactional
@@ -119,7 +121,7 @@ public class UserServiceImpl implements UserService {
         }
         user.setPassword(passwordEncoder.encode(dto.getNewPassword()));
         UserEntity save = userRepository.save(user);
-        actionService.create(save.getId(), Actions.UPDATE,entityTypes.USER );
+        actionService.create(save.getId(), Actions.UPDATE, entityTypes.USER);
         return userMapper.toDto(save);
     }
 
@@ -132,6 +134,7 @@ public class UserServiceImpl implements UserService {
         }
         user.setIsVerified(true);
         userRepository.save(user);
+        actionService.create(user.getId(), Actions.VERIFY, entityTypes.USER);
         return userMapper.toDto(user);
     }
 
@@ -142,7 +145,7 @@ public class UserServiceImpl implements UserService {
         UserEntity user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(Message.userNotFound(id)));
         cardService.deleteCardsByUserId(id);
         userRepository.delete(user);
-        actionService.create(id,Actions.DELETE,entityTypes.USER);
+        actionService.create(id, Actions.DELETE, entityTypes.USER);
         tokenService.deleteByUser(user);
         return userMapper.toDto(user);
     }
@@ -173,7 +176,7 @@ public class UserServiceImpl implements UserService {
         user1.setDayOfBirth(nonNull(updatedUser.getDayOfBirth()) ? updatedUser.getDayOfBirth() : user1.getDayOfBirth());
         user1.setAge(Year.now().getValue() - updatedUser.getDayOfBirth().getYear());
         UserEntity save = userRepository.save(user1);
-        actionService.create(save.getId(), Actions.UPDATE,entityTypes.USER);
+        actionService.create(save.getId(), Actions.UPDATE, entityTypes.USER);
         return userMapper.toDto(save);
     }
 
@@ -196,7 +199,7 @@ public class UserServiceImpl implements UserService {
         }
         UserEntity entity = userMapper.toEntity(updatedUser, user1);
         UserEntity save = userRepository.save(entity);
-        actionService.create(save.getId(), Actions.UPDATE,entityTypes.USER);
+        actionService.create(save.getId(), Actions.UPDATE, entityTypes.USER);
 
         return userMapper.toDto(save);
     }
@@ -213,6 +216,7 @@ public class UserServiceImpl implements UserService {
         String token1 = token.split("\\.")[2];
         tokenEntity.setToken(token1);
         tokenEntity.setUser(userRepository.findByPhoneOrEmailOrUsername(username, username, username));
+        actionService.create(userDetails.getId(), Actions.LOGIN, entityTypes.USER);
         tokenService.saveToken(tokenEntity);
         return new UserAuthDto(userDetails.getId(), token);
     }
@@ -224,60 +228,18 @@ public class UserServiceImpl implements UserService {
         UserEntity userEntity = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(Message.userNotFound(id)));
         tokenService.deleteByUserAndToken(userEntity, token.split("\\.")[2]);
     }
-    //    @Override
-//    @Transactional
-//    public List<ResponseUserDto> search(FilterSearchUser.Search userSearch) {
-//        Specification<UserEntity> specification = Specification.where((root, criteriaQuery, criteriaBuilder) -> {
-//            var predicates = new ArrayList<Predicate>();
-//
-//            if (nonNull(userSearch.getText())) {
-//                Predicate nameLike = criteriaBuilder.like(root.get(Root.NAME), "%" + userSearch.getText() + "%");
-//                predicates.add(nameLike);
-//
-//                Predicate lastNameLike = criteriaBuilder.like(root.get(Root.LASTNAME), "%" + userSearch.getText() + "%");
-//                predicates.add(lastNameLike);
-//
-//                Predicate emailLike = criteriaBuilder.like(root.get(Root.EMAIL), "%" + userSearch.getText() + "%");
-//                predicates.add(emailLike);
-//            }
-//            return criteriaBuilder.or(predicates.toArray(new Predicate[0]));
-//        });
-//        return userMapper.toDto(userRepository.findAll(specification));
-//    }
-//
-//    @Override
-//    @Transactional
-//    public List<ResponseUserDto> filter(FilterSearchUser.Filter userFilter) {
-//        Specification<UserEntity> specification = Specification.where((root, criteriaQuery, criteriaBuilder) -> {
-//            var predicates = new ArrayList<Predicate>();
-//
-//            if (nonNull(userFilter.getIsVerified())) {
-//                Predicate isVerified = criteriaBuilder.equal(root.get(Root.IS_VERIFIED), userFilter.getIsVerified());
-//                predicates.add(isVerified);
-//            }
-//            if (nonNull(userFilter.getGender())) {
-//                Predicate gender = criteriaBuilder.equal(root.get(Root.GENDER), userFilter.getGender());
-//                predicates.add(gender);
-//            }
-//            if (nonNull(userFilter.getStartAge())) {
-//                Predicate startAge = criteriaBuilder.greaterThan(root.get(Root.AGE), userFilter.getStartAge());
-//                predicates.add(startAge);
-//            }
-//            if (nonNull(userFilter.getEndAge())) {
-//                Predicate endAge = criteriaBuilder.lessThan(root.get(Root.AGE), userFilter.getEndAge());
-//                predicates.add(endAge);
-//            }
-//            /*if (nonNull(userFilter.getProductName())) {
-//                Join<UserEntity, ProductEntity> products = root.join("productEntities");
-//                Predicate productName = criteriaBuilder.equal(products.get("name"), userFilter.getProductName());
-//                predicates.add(productName);
-//            }*/
-//
-//
-//            return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
-//        });
-//        return userMapper.toDto(userRepository.findAll(specification));
-//    }
+
+    @Override
+    @Transactional
+    public List<ResponseUserDto> search(com.smartCode.ecommerce.model.dto.user.FilterSearchUser.Search userSearch) {
+        return userRepository.findAll(extractor.search(userSearch)).stream().map(userMapper::toDto).toList();
+    }
+
+    @Override
+    @Transactional
+    public List<ResponseUserDto> filter(com.smartCode.ecommerce.model.dto.user.FilterSearchUser.Filter userFilter) {
+        return userRepository.findAll(extractor.filter(userFilter)).stream().map(userMapper::toDto).toList();
+    }
 
 
 }

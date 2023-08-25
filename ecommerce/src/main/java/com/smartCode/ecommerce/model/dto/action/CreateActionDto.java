@@ -6,11 +6,12 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class CreateActionDto {
+public class CreateActionDto implements Serializable {
 
     private Integer userId;
 

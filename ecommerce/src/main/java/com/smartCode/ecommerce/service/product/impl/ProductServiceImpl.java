@@ -4,21 +4,21 @@ import com.smartCode.ecommerce.exceptions.ResourceNotFoundException;
 import com.smartCode.ecommerce.mapper.ProductMapper;
 import com.smartCode.ecommerce.model.dto.product.CreateProductDto;
 import com.smartCode.ecommerce.model.dto.product.PartialUpdateProductDto;
+import com.smartCode.ecommerce.model.dto.product.ProductFilterSearchRequest;
 import com.smartCode.ecommerce.model.dto.product.ResponseProductDto;
 import com.smartCode.ecommerce.model.dto.product.UpdateProductDto;
 import com.smartCode.ecommerce.model.entity.product.ProductEntity;
 import com.smartCode.ecommerce.repository.product.ProductRepository;
 import com.smartCode.ecommerce.service.action.ActionService;
 import com.smartCode.ecommerce.service.product.ProductService;
+import com.smartCode.ecommerce.spec.product.ProductSpecification;
 import com.smartCode.ecommerce.util.constants.Actions;
-import com.smartCode.ecommerce.util.constants.Message;
 import com.smartCode.ecommerce.util.constants.entityTypes;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.util.Objects.nonNull;
 
@@ -28,6 +28,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
     private final ActionService actionService;
+    private final ProductSpecification productSpecification;
 
     @Override
     @Transactional(readOnly = true)
@@ -72,13 +73,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<ResponseProductDto> getAll() {
-        List<ProductEntity> products = productRepository.findAll();
-        List<ResponseProductDto> list = new ArrayList<>();
-        for (ProductEntity product : products) {
-            list.add(productMapper.toDto(product));
-        }
-        return list;
+    public Page<ResponseProductDto> getAll(ProductFilterSearchRequest request, PageRequest page) {
+        Page<ProductEntity> products = productRepository.findAll(productSpecification.searchAndFilter(request),page);
+        return products.map(productMapper::toDto);
     }
 
     @Override

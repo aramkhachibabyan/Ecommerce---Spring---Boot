@@ -1,5 +1,6 @@
 package com.smartCode.ecommerce.service.user;
 
+import com.smartCode.ecommerce.model.dto.user.FilterSearchUser;
 import com.smartCode.ecommerce.model.dto.user.ResponseUserDto;
 import com.smartCode.ecommerce.model.dto.user.auth.CreateUserDto;
 import com.smartCode.ecommerce.model.dto.user.update.ChangePasswordUserDto;
@@ -31,7 +32,7 @@ public interface UserService {
 
     void logout(String token);
 
-//    List<ResponseUserDto> search(FilterSearchUser.Search userSearch);
-//
-//    List<ResponseUserDto> filter(FilterSearchUser.Filter userFilter);
+    List<ResponseUserDto> search(FilterSearchUser.Search userSearch);
+
+    List<ResponseUserDto> filter(FilterSearchUser.Filter userFilter);
 }
